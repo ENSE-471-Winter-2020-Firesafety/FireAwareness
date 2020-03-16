@@ -100,122 +100,12 @@ struct PhoneCall: View
        
 }
 
-struct PhoneCall_Previews: PreviewProvider {
+struct PhoneCall_Previews: PreviewProvider
+{
     static var previews: some View
     {
         PhoneCall().environmentObject(UserData())
     }
 }
-
-
-/**
- 
- 
-
-     ZStack(alignment: .bottom) {
-         Color.black.edgesIgnoringSafeArea(.all)
-         
-         VStack(alignment: .leading ,spacing: 20) {
-             VStack {
-                 
-                 HStack(spacing : 20) {
-                         Button(action: {}) {
-                             Text("1")
-                         }
-                         
-                         Button(action: {}) {
-                             Text("2")
-                         }
-                         
-                         Button(action: {}) {
-                             Text("3")
-                         }
-                     }
-             }
-             .buttonStyle(CircleStyle())
-             
-             VStack (alignment: .leading, spacing: 100) {
-                      HStack(spacing : 20) {
-                            Button(action: {}) {
-                                 Text("4")
-                             }
-                                            
-                             Button(action: {}) {
-                                 Text("5")
-                             }
-                                            
-                             Button(action: {}) {
-                                 Text("6")
-                             }
-                         }
-                     }
-                     .buttonStyle(CircleStyle())
-             
-             VStack (alignment: .leading, spacing: 100) {
-              HStack(spacing : 20) {
-                    Button(action: {}) {
-                         Text("7")
-                     }
-                                    
-                     Button(action: {}) {
-                         Text("8")
-                     }
-                                    
-                     Button(action: {}) {
-                         Text("9")
-                     }
-                 }
-             }
-             .buttonStyle(CircleStyle())
-             
-             VStack (alignment: .leading, spacing: 100) {
-              HStack(spacing : 20) {
-                    Button(action: {}) {
-                         Text("*")
-                     }
-                                    
-                     Button(action: {}) {
-                         Text("0")
-                     }
-                                    
-                     Button(action: {}) {
-                         Text("#")
-                     }
-                 }
-             }
-             .buttonStyle(CircleStyle())
-             
-             VStack {
-                 Button(action: {}) {
-                     Image(systemName: "phone")
-                 }
-                 .buttonStyle(CallPhoneStyle())
-                 .frame(width: 270, height: 70, alignment: .center)
-               
- 
-             }
-           
-                            
-         } // end Vstack
-         
-         .padding(.bottom)
-         
-     } // end of Zstack
- */
+    
 }
-
-
-
-
-/*
- 
- .onTapGesture
- {
-     withAnimation
-     {
-         self.env.isPresented.toggle()
-         
-         
-     }
- }
- */
