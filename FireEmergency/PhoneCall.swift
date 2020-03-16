@@ -100,12 +100,12 @@ struct PhoneCall: View
        
 }
 
-struct PhoneCall_Previews: PreviewProvider
-{
-    static var previews: some View
+    struct PhoneCall_Previews: PreviewProvider
     {
-        PhoneCall().environmentObject(UserData())
+        static var previews: some View
+        {
+            PhoneCall().environmentObject(UserData())
+        }
     }
-}
-    
+        
 }
