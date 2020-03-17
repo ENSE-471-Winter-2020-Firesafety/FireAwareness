@@ -16,8 +16,7 @@ struct HomePageDetail: View {
        // {
         ZStack {
             
-            Color.pink.edgesIgnoringSafeArea(.all)
-            
+            Color.pink.edgesIgnoringSafeArea(.bottom)
             
             
             VStack {
@@ -32,7 +31,22 @@ struct HomePageDetail: View {
                 }
                 .background(LinearGradient(gradient: Gradient(colors: [Color.pink , Color.purple]), startPoint: .leading, endPoint: .trailing))
                 Spacer()
+
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Text("Practice Phone Call")
+                        .font(.title)
+                        .fontWeight(.medium)
+                        .foregroundColor(Color.black)
+                        .multilineTextAlignment(.center)
+                        .padding(.leading)
+                        .frame(width: 300.0, height: 100.0)
+                        .background(/*@START_MENU_TOKEN@*/Color.orange/*@END_MENU_TOKEN@*/)
+                        .position(x: 200, y: 150)
+                        
+                }
+
             }.padding()
+                
         }
             
         
