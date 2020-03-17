@@ -8,9 +8,6 @@
 
 import SwiftUI
 
-
-
-
 struct PhoneCall: View
 {
     @EnvironmentObject var env: UserData
@@ -31,22 +28,19 @@ struct PhoneCall: View
             VStack (spacing: 20) {
                
                 HStack {
-                               Button(action: {
+                        Button(action: {
                                    
-                               }, label: {
+                         }, label: {
                                 
-                                   Image("leftArrow").foregroundColor(.white)
-                               })
+                          Image("leftArrow").foregroundColor(.white)
+                    })
                      
                     Spacer()
-                    
-                }.padding()
+                }
+                .padding()
+                
                  Spacer()
                 
-                
-                           
-                
-                        
                 Text(env.display).foregroundColor(.white)
                     .font(.system(size:64))
                 
@@ -68,36 +62,30 @@ struct PhoneCall: View
                          
                          }
                      }
-                        
-                         HStack {
-                                Button(action: {}) {
-                                    Image(systemName: "phone")
-                                }
-                                .buttonStyle(CallPhoneStyle())
-                                .frame(width: 270, height: 70, alignment: .center)
-                            
-                            Button(action: {
-
-                                withAnimation
-                                {
-                                    self.env.isPresented.toggle()
+                
+                    HStack {
+                            Button(action: {}) {
+                            Image(systemName: "phone")
+                        }
+                         .buttonStyle(CallPhoneStyle())
+                         .frame(width: 270, height: 70, alignment: .center)
+                                
+                        Button(action: {
+                                    
+                               self.env.isPresented.toggle()
                                     self.env.display.removeLast()
-                                }
-                            }, label: {
+                                    
+                                }, label: {
                                 Image(systemName: "xmark.circle.fill")
-                                .foregroundColor(.white)
+                             .foregroundColor(.white)
+                                    
                             })
-                            
-                            
-                            
-
-                            }
-                        
-                     .padding(10)
+                                
+                    }
+                    .padding(10)
                  } // end of Vstack
         }
-     
-       
+
 }
 
     struct PhoneCall_Previews: PreviewProvider
