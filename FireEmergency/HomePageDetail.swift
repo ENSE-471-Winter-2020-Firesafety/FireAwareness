@@ -42,12 +42,10 @@ struct HomePageDetail: View {
                 }
                 .background(LinearGradient(gradient: Gradient(colors: [Color.pink , Color.purple]), startPoint: .leading, endPoint: .trailing))
                 Spacer()
-                HStack{
-                    Image("phone").resizable()
-                        .aspectRatio(1, contentMode: .fit)
-                        .background(Color.black.opacity(0.5))
-                    Spacer()
+                
+               
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    
                     Text("Practice Phone Call")
                         .font(.title)
                         .fontWeight(.medium)
@@ -61,9 +59,8 @@ struct HomePageDetail: View {
                         
 
                 }
-                }
-                Spacer()
                 
+                Spacer()
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                                    Text("Draw Escape Plan")
                                        .font(.title)
@@ -75,6 +72,7 @@ struct HomePageDetail: View {
                                     .background(Color(red: 255/255, green: 172/255, blue: 4/255))
                     .cornerRadius(/*@START_MENU_TOKEN@*/16.0/*@END_MENU_TOKEN@*/)
                                }
+                
                 Spacer()
                 
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
