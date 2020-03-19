@@ -24,7 +24,7 @@ struct PhoneCall: View
         ZStack(alignment: .bottom) {
            
             
-            Color.black.edgesIgnoringSafeArea(.all)
+            Color.white.edgesIgnoringSafeArea(.all)
             VStack (spacing: 20) {
                
                 HStack {
@@ -41,7 +41,7 @@ struct PhoneCall: View
                 
                  Spacer()
                 
-                Text(env.display).foregroundColor(.white)
+                Text(env.display).foregroundColor(.black)
                     .font(.system(size:64))
                 
                      ForEach(buttons , id: \.self) { row in
@@ -77,7 +77,7 @@ struct PhoneCall: View
                                     
                                 }, label: {
                                 Image(systemName: "xmark.circle.fill")
-                             .foregroundColor(.white)
+                             .foregroundColor(.black)
                                     
                             })
                                 

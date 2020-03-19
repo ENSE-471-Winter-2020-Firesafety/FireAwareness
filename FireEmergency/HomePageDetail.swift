@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct HomePageDetail: View {
+    
     var body: some View
     {
         
@@ -38,7 +39,10 @@ struct HomePageDetail: View {
                         .foregroundColor(.white)
                         
                     Spacer()
-                    Image(systemName: "person")
+                //    Image(systemName: "person")
+                    Image("dog")
+                    .resizable()
+                        .frame(width: 32, height: 32, alignment: .trailing)
                 }
                // .background(LinearGradient(gradient: Gradient(colors: [Color.pink , Color.pink]), startPoint: .leading, endPoint: .trailing))
                 Spacer()

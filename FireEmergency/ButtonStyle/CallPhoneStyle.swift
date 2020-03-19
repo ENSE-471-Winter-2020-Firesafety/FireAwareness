@@ -14,6 +14,8 @@ struct CallPhoneStyle: ButtonStyle
         
             Circle()
                 .fill(Color.green)
+            
+        
         .overlay(
                 Circle()
                     .fill(Color.white)
