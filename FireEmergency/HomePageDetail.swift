@@ -10,11 +10,13 @@ import SwiftUI
 
 struct HomePageDetail: View {
     
+    @State var show_Screen = false;
+    
     var body: some View
     {
         
-       // NavigationView
-       // {
+   //     NavigationView
+   //     {
         ZStack {
 //            .forcegroundColor()
 //            Color(red: 0.5, green: 0.3, bule: 0.4)
@@ -22,12 +24,13 @@ struct HomePageDetail: View {
             
             
             Rectangle()
-                .foregroundColor(Color(red: 195/255, green: 140/255, blue: 148/255))
+                .foregroundColor(Color(red: 195.0 / 255.0, green: 140.0/255.0, blue: 148.0/255.0))
                 .edgesIgnoringSafeArea(.bottom)
             
             Rectangle()
-            .foregroundColor(Color(red: 203/255, green: 108/255, blue: 99/255))
-                .frame(height: 80)
+                .foregroundColor(Color(red: 203.0/255.0, green: 108.0/255.0, blue: 99.0/255.0))
+                .frame(height: 80.0)
+               
                 .cornerRadius(16.0)
                 .position(x: 207, y: 40)
             
@@ -47,23 +50,25 @@ struct HomePageDetail: View {
                // .background(LinearGradient(gradient: Gradient(colors: [Color.pink , Color.pink]), startPoint: .leading, endPoint: .trailing))
                 Spacer()
                 
-               
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {
+                    
+                    self.show_Screen.toggle()
+                    
+                }, label: {
                     
                     Text("Practice Phone Call")
-                        .font(.title)
-                        .fontWeight(.medium)
-                        .foregroundColor(Color.black)
-                        .multilineTextAlignment(.center)
-                        .padding(.leading)
-                        .frame(width: 300.0, height: 100.0)
-                        .background(/*@START_MENU_TOKEN@*/Color.orange/*@END_MENU_TOKEN@*/)
-                        .cornerRadius(20.0)
-                        .shadow(radius: /*@START_MENU_TOKEN@*/6/*@END_MENU_TOKEN@*/)
-                        
-
-                }
-                
+                    .font(.title)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color.black)
+                    .multilineTextAlignment(.center)
+                    .padding(.leading)
+                    .frame(width: 300.0, height: 100.0)
+                    .background(/*@START_MENU_TOKEN@*/Color.orange/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(40)
+                    .shadow(radius: /*@START_MENU_TOKEN@*/6/*@END_MENU_TOKEN@*/)
+                })
+                    
+                    
                 Spacer()
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                                    Text("Draw Escape Plan")
@@ -74,7 +79,7 @@ struct HomePageDetail: View {
                                        .padding(.leading)
                                        .frame(width: 300.0, height: 100.0)
                                     .background(Color(red: 255/255, green: 172/255, blue: 4/255))
-                    .cornerRadius(/*@START_MENU_TOKEN@*/16.0/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(40)
                                }
                 
                 Spacer()
@@ -88,7 +93,7 @@ struct HomePageDetail: View {
                                        .padding(.leading)
                                        .frame(width: 300.0, height: 100.0)
                                     .background(Color(red: 251/255, green: 219/255, blue: 123/255))
-                    .cornerRadius(/*@START_MENU_TOKEN@*/16.0/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(40)
 //                                       .position(x: 200, y: 150)
                                }
                 Spacer()
@@ -102,16 +107,16 @@ struct HomePageDetail: View {
                                        .padding(.leading)
                                        .frame(width: 300.0, height: 100.0)
                                     .background(Color(red: 251/255, green: 251/255, blue: 4/255))
-                                      .cornerRadius(/*@START_MENU_TOKEN@*/16.0/*@END_MENU_TOKEN@*/)
+                                      .cornerRadius(40)
                                }
                 Spacer()
             }.padding()
-                
-        }
             
-        
+          
+        } // end of ZStack
             
-        //}
+    
+    //    } // end of Nav
    
     }
 }

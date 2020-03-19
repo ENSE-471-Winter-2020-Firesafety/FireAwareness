@@ -11,6 +11,7 @@ import SwiftUI
 struct PhoneCall: View
 {
     @EnvironmentObject var env: UserData
+    @Environment(\.presentationMode) var presentationMode
     
     let buttons = [
         ["1" , "2" , "3"],
@@ -29,10 +30,10 @@ struct PhoneCall: View
                
                 HStack {
                         Button(action: {
-                                   
+                            self.presentationMode.wrappedValue.dismiss()
                          }, label: {
                                 
-                          Image("leftArrow").foregroundColor(.white)
+                          Image("leftArrow").foregroundColor(.black)
                     })
                      
                     Spacer()
