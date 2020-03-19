@@ -40,7 +40,7 @@ struct HomePageDetail: View {
                     Spacer()
                     Image(systemName: "person")
                 }
-                .background(LinearGradient(gradient: Gradient(colors: [Color.pink , Color.purple]), startPoint: .leading, endPoint: .trailing))
+               // .background(LinearGradient(gradient: Gradient(colors: [Color.pink , Color.pink]), startPoint: .leading, endPoint: .trailing))
                 Spacer()
                 
                
