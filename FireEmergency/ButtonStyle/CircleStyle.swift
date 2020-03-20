@@ -18,7 +18,7 @@ struct CircleStyle: ButtonStyle
             
         .overlay(
                 Circle()
-                    .fill(Color.white)
+                    .fill(Color.gray)
                     .opacity(configuration.isPressed ? 0.5 : 0)
             ) //.overlay(Circle().stroke(lineWidth:2).foregroundColor(.white).padding(4))
      .overlay(configuration.label.foregroundColor(.black))

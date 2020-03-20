@@ -42,7 +42,7 @@ struct HomePageDetail: View {
                         .foregroundColor(.white)
                         
                     Spacer()
-                //    Image(systemName: "person")
+
                     Image("dog")
                     .resizable()
                         .frame(width: 32, height: 32, alignment: .trailing)
@@ -67,8 +67,8 @@ struct HomePageDetail: View {
                     .cornerRadius(40)
                     .shadow(radius: /*@START_MENU_TOKEN@*/6/*@END_MENU_TOKEN@*/)
                 })
-                    
-                    
+                   
+                 
                 Spacer()
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                                    Text("Draw Escape Plan")
@@ -111,6 +111,11 @@ struct HomePageDetail: View {
                                }
                 Spacer()
             }.padding()
+            
+            if show_Screen {
+                PhoneCall()
+            }
+               
             
           
         } // end of ZStack
