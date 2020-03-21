@@ -8,93 +8,265 @@
 
 import SwiftUI
 
+
 struct PhoneCall: View
 {
     @EnvironmentObject var env: UserData
-    @Environment(\.presentationMode) var presentationMode
     
-    let buttons = [
-        ["1" , "2" , "3"],
-        ["4" , "5" , "6"],
-        ["7" , "8" , "9"],
-        ["*" , "0" , "#"]
-    ]
-    
+    @State var helpMode = false
+      
+    @State var options = false
+      
+ 
     var body: some View
     {
-        ZStack(alignment: .bottom) {
-           
-            
-            Color.white.edgesIgnoringSafeArea(.all)
-            VStack (spacing: 20) {
+       // ZStack {
                
-                HStack {
-                        Button(action: {
-                            self.presentationMode.wrappedValue.dismiss()
-                         }, label: {
-                                
-                          Image("leftArrow").foregroundColor(.black)
-                    })
-                     
-                    Spacer()
-                }
-                .padding()
-                
-                 Spacer()
-                
-                Text(env.display).foregroundColor(.black)
-                    .font(.system(size:64))
-                
-                     ForEach(buttons , id: \.self) { row in
-                        HStack(spacing: 20) {
-                             
-                             ForEach(row , id:\.self) { button in
+               VStack {
+                   
+                   VStack {
+                       
+                       HStack {
+                           
+                          Button(action: {
                                
-                                
-                                 Button(action: {
-                                //    self.env.display += button
-                                    self.env.receieveInput(input: button)
-                                 //   self.env.memento()
-                                 }, label: {
-                                     Text(button)
-                                 })
-                             }
-                         .buttonStyle(CircleStyle())
-                         
-                         }
-                     }
-                
-                    HStack {
-                            Button(action: {}) {
-                            Image(systemName: "phone")
-                        }
-                         .buttonStyle(CallPhoneStyle())
-                         .frame(width: 270, height: 70, alignment: .center)
-                                
-                        Button(action: {
-                                    
-                               self.env.isPresented.toggle()
-                                    self.env.display.removeLast()
-                                    
-                                }, label: {
-                                Image(systemName: "xmark.circle.fill")
-                             .foregroundColor(.black)
-                                    
-                            })
-                                
-                    }
-                    .padding(10)
-                 } // end of Vstack
-        }
+                           }, label: {
+                                 Image(systemName: "arrow.left.circle")
+                                  .resizable()
+                                  .frame(width: 40, height: 40, alignment: .leading)
+                                   .foregroundColor(.black)
+                                //   .background(Color.black)
+                           })
+                           
+                           Spacer()
+                        
+                            VStack {
+                                HStack {
+                                    Button(action: {
+                                        self.options.toggle()
+                                        
+                                    }, label: {
+                                           Image("setting")
+                                            .foregroundColor(.white)
+                                             .background(Color.black)
+                                    })
+                                }
+                                HStack {
+                                    Text("Option")
+                                        .font(.subheadline)
+                                        .font(.system(size:15))
+                                }
+                            }
+                           
+                           
+                       } // options
+                       
+                       HStack {
+                           if options {
+                               Toggle(isOn: $helpMode, label: {
+                                   Text("Help Mode")
+                                       .font(.system(size:25))
+                                       .foregroundColor(.black)
+                               })
+                           }
+                        
+                       } // HStack for helpMode toggle
+                           
+                   } // option + back Button
+                       
+                   .padding()
+                  Spacer()
+                   
+                   HStack {
+             
+                           Text(env.display)
+                           .foregroundColor(.black)
+                           .font(.system(size:25))
 
-}
+                       } // HStack for display Area
+                   
+                   HStack {
+                       // button 1
+                       
+                       Button(action: {
+                           
+                           self.env.receieveInput(input: "1")
+                       }, label: {
+                           Text("1")
+                           
+                           })
+                              .buttonStyle(CircleStyle())
+                       
+                       // button 2
+                       Button(action: {
+                               self.env.receieveInput(input: "2")
+                       }, label: {
+                           Text("2")
+                           .foregroundColor(.black)
+                           
+                           }).disabled(helpMode)
+                            .buttonStyle(CircleStyle(helpMode: helpMode))
+                           
+                       // button 3
+                       Button(action: {
+                               self.env.receieveInput(input: "3")
+                           
+                       }, label: {
+                           Text("3")
+                               .foregroundColor(.black)
+                           
+                           }).disabled(helpMode)
+                            .buttonStyle(CircleStyle(helpMode: helpMode))
+                       
+                       } // end of HStack for button 1 , 2 and 3
+                   
+                   HStack {
+                             // button 4
+                           Button(action: {
+                                   self.env.receieveInput(input: "4")
+                           }, label: {
+                               Text("4")
+                                   .foregroundColor(.black)
+                           }).disabled(helpMode)
+                           .buttonStyle(CircleStyle(helpMode: helpMode))
+                                      
+                           // button 5
+                           Button(action: {
+                                   self.env.receieveInput(input: "5")
+                               }, label: {
+                                   Text("5")
+                                   .foregroundColor(.black)
+                                          
+                           }).disabled(helpMode)
+                           .buttonStyle(CircleStyle(helpMode: helpMode))
+                                          
+                           // button 6
+                           Button(action: {
+                                   self.env.receieveInput(input: "6")
+                               }, label: {
+                                   Text("6")
+                                   .foregroundColor(.black)
+                                          
+                               }).disabled(helpMode)
+                               .buttonStyle(CircleStyle(helpMode: helpMode))
+                                      
+                           } // end of HStack for button 4 , 5 and 6
+                   
+                           HStack {
+                                      // button 7
+                                    Button(action: {
+                                           self.env.receieveInput(input: "7")
+                                                  
+                                    }, label: {
+                                        Text("7")
+                                            .foregroundColor(.black)
+                                    }).disabled(helpMode)
+                                    .buttonStyle(CircleStyle(helpMode: helpMode))
+                                               
+                                    // button 8
+                                    Button(action: {
+                                           self.env.receieveInput(input: "8")
+                                        }, label: {
+                                            Text("8")
+                                            .foregroundColor(.black)
+                                                   
+                                    }).disabled(helpMode)
+                                    .buttonStyle(CircleStyle(helpMode: helpMode))
+                                                   
+                                    // button 9
+                                    Button(action: {
+                                       self.env.receieveInput(input: "9")
+                                   }, label: {
+                                       Text("9")
+                                   })
+                                   .buttonStyle(CircleStyle())
+                               
+                            } // end of HStack for button 7 , 8 and 9
+                   
+                           HStack {
+                                // button 4
+                              Button(action: {
+                                      self.env.receieveInput(input: "*")
+                              }, label: {
+                                  Text("*")
+                                      .foregroundColor(.black)
+                              }).disabled(helpMode)
+                              .buttonStyle(CircleStyle(helpMode: helpMode))
+                                         
+                              // button 5
+                              Button(action: {
+                                      self.env.receieveInput(input: "0")
+                                  }, label: {
+                                      Text("0")
+                                      .foregroundColor(.black)
+                                             
+                              }).disabled(helpMode)
+                              .buttonStyle(CircleStyle(helpMode: helpMode))
+                                             
+                              // button 6
+                              Button(action: {
+                                      self.env.receieveInput(input: "#")
+                                  }, label: {
+                                      Text("#")
+                                      .foregroundColor(.black)
+                                             
+                                  }).disabled(helpMode)
+                                  .buttonStyle(CircleStyle(helpMode: helpMode))
+                                         
+                       } // end of HStack for button * , 0 and #
+                   
+                       VStack {
 
-    struct PhoneCall_Previews: PreviewProvider
-    {
-        static var previews: some View
-        {
-            PhoneCall().environmentObject(UserData())
-        }
-    }
+                           HStack {
+                               
+                               HStack {
+                                   
+                                       Button(action: {
+                                           
+                                           }, label: {
+                                                   Image(systemName: "phone")
+                                                                     
+                                               }).buttonStyle(CallPhoneStyle())
+                                               .padding()
+                                       } // HStack for Call Icon
+                                       .padding(.leading,50)
+                               
+                                   HStack {
+                                             Button(action: {
+                                               
+                                                   if !self.env.display.isEmpty {
+                                                       
+                                                       self.env.display.removeLast()
+                                                   }
+                                               
+                                             }, label: {
+
+                                                Image(systemName: "xmark.circle.fill")
+                                                 .foregroundColor(.black)
+                                                .font(.system(size:20))
+                                               
+                                       }).padding(.leading,10)
+                                       
+                                   } // HStack for Clear Icon
+                                   
+                               } // HStack for both Call and Clear Icon
+
+                           } // end of HStack for button 4 , 5 and 6
+                   
+                   } // end of vstack
+               
+        //   } // end of zstack
         
+    }
+
 }
+
+struct PhoneCall_Previews: PreviewProvider
+{
+    static var previews: some View
+    {
+        PhoneCall().environmentObject(UserData())
+    }
+}
+        
+
