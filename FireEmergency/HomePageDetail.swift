@@ -10,7 +10,7 @@ import SwiftUI
 
 struct HomePageDetail: View {
     
-    @State var show_Screen = false;
+    @State var show_phone_Screen = false;
     
     var body: some View
     {
@@ -26,14 +26,17 @@ struct HomePageDetail: View {
             Rectangle()
                 .foregroundColor(Color(red: 195.0 / 255.0, green: 140.0/255.0, blue: 148.0/255.0))
                 .edgesIgnoringSafeArea(.bottom)
-            
+                
+            /*
             Rectangle()
+               
                 .foregroundColor(Color(red: 203.0/255.0, green: 108.0/255.0, blue: 99.0/255.0))
                 .frame(height: 80.0)
-               
+                .padding(.trailing,0)
                 .cornerRadius(16.0)
                 .position(x: 207, y: 40)
-            
+                */
+
             VStack {
                 HStack {
                     Text("FireAwereness")
@@ -47,14 +50,16 @@ struct HomePageDetail: View {
                     .resizable()
                         .frame(width: 32, height: 32, alignment: .trailing)
                 }
-               // .background(LinearGradient(gradient: Gradient(colors: [Color.pink , Color.pink]), startPoint: .leading, endPoint: .trailing))
+                .padding()
+                .background(Color(red: 203.0/255.0, green: 108.0/255.0, blue: 99.0/255.0))
+                
                 Spacer()
                 
                 Button(action: {
                     
-                    self.show_Screen.toggle()
+                    self.showPhoneScreen()
                     
-                }, label: {
+                    }) {
                     
                     Text("Practice Phone Call")
                     .font(.title)
@@ -66,12 +71,11 @@ struct HomePageDetail: View {
                     .background(/*@START_MENU_TOKEN@*/Color.orange/*@END_MENU_TOKEN@*/)
                     .cornerRadius(40)
                     .shadow(radius: /*@START_MENU_TOKEN@*/6/*@END_MENU_TOKEN@*/)
-                })
+                        
+                }
                 
 
-                              
-                   
-                 
+                
                 Spacer()
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                                    Text("Draw Escape Plan")
@@ -121,8 +125,15 @@ struct HomePageDetail: View {
             
     
     //    } // end of Nav
+        
+        
    
     }
+    
+    func showPhoneScreen() {
+         show_phone_Screen.toggle()
+    }
+    
 }
 
 
