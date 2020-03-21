@@ -67,6 +67,9 @@ struct HomePageDetail: View {
                     .cornerRadius(40)
                     .shadow(radius: /*@START_MENU_TOKEN@*/6/*@END_MENU_TOKEN@*/)
                 })
+                
+
+                              
                    
                  
                 Spacer()
@@ -111,11 +114,7 @@ struct HomePageDetail: View {
                                }
                 Spacer()
             }.padding()
-            
-            if show_Screen {
-                PhoneCall()
-            }
-               
+           
             
           
         } // end of ZStack

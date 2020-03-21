@@ -20,7 +20,7 @@ struct PhoneCall: View
  
     var body: some View
     {
-        ZStack {
+       // ZStack {
                
                VStack {
                    
@@ -39,15 +39,26 @@ struct PhoneCall: View
                            })
                            
                            Spacer()
+                        
+                            VStack {
+                                HStack {
+                                    Button(action: {
+                                        self.options.toggle()
+                                        
+                                    }, label: {
+                                           Image("setting")
+                                            .foregroundColor(.white)
+                                             .background(Color.black)
+                                    })
+                                }
+                                HStack {
+                                    Text("Option")
+                                        .font(.subheadline)
+                                        .font(.system(size:15))
+                                }
+                            }
                            
-                           Button(action: {
-                               self.options.toggle()
-                               
-                           }, label: {
-                                  Image("setting")
-                                   .foregroundColor(.white)
-                                    .background(Color.black)
-                           })
+                           
                        } // options
                        
                        HStack {
@@ -244,7 +255,7 @@ struct PhoneCall: View
                    
                    } // end of vstack
                
-           } // end of zstack
+        //   } // end of zstack
         
     }
 
