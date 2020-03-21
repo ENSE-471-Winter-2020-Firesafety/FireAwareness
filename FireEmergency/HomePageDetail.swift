@@ -36,7 +36,7 @@ struct HomePageDetail: View {
             
             VStack {
                 HStack {
-                    Text("FireAwereness")
+                    Text("Fire Awareness")
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(.white)
