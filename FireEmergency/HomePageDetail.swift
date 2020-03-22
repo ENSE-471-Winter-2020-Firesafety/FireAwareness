@@ -72,9 +72,13 @@ struct HomePageDetail: View {
                     .cornerRadius(40)
                     .shadow(radius: /*@START_MENU_TOKEN@*/6/*@END_MENU_TOKEN@*/)
                         
+                        if show_phone_Screen {
+                            EscapePlanGridLayout()
+                        }
+                        
                 }
                 
-
+               
                 
                 Spacer()
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {

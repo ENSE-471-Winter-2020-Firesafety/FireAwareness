@@ -64,6 +64,7 @@ struct PhoneCall: View
                                         .foregroundColor(.white)
                                      //   .background(Color.purple)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color(.orange), Color.pink]), startPoint: .leading, endPoint: .trailing))
+                                        
                                     .cornerRadius(40)
                                
     

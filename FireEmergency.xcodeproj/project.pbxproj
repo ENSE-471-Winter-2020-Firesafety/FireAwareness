@@ -18,6 +18,7 @@
 		1862BE4A241EA0B500EDEC97 /* PhoneCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862BE49241EA0B500EDEC97 /* PhoneCall.swift */; };
 		1862BE4C241ECF4800EDEC97 /* CallPhoneStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862BE4B241ECF4800EDEC97 /* CallPhoneStyle.swift */; };
 		1862BE50241EFF3300EDEC97 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862BE4F241EFF3300EDEC97 /* UserData.swift */; };
+		1888E6302427F27700FB314C /* EscapePlanGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		1862BE49241EA0B500EDEC97 /* PhoneCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCall.swift; sourceTree = "<group>"; };
 		1862BE4B241ECF4800EDEC97 /* CallPhoneStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallPhoneStyle.swift; sourceTree = "<group>"; };
 		1862BE4F241EFF3300EDEC97 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapePlanGridLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				1862BE0B241E850F00EDEC97 /* AppDelegate.swift */,
 				1862BE49241EA0B500EDEC97 /* PhoneCall.swift */,
 				1862BE0D241E850F00EDEC97 /* SceneDelegate.swift */,
+				1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */,
 				1862BE12241E850F00EDEC97 /* HomePageDetail.swift */,
 				1862BE14241E851200EDEC97 /* Assets.xcassets */,
 				1862BE19241E851200EDEC97 /* LaunchScreen.storyboard */,
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1862BE0C241E850F00EDEC97 /* AppDelegate.swift in Sources */,
+				1888E6302427F27700FB314C /* EscapePlanGridLayout.swift in Sources */,
 				1862BE0E241E850F00EDEC97 /* SceneDelegate.swift in Sources */,
 				1862BE50241EFF3300EDEC97 /* UserData.swift in Sources */,
 				1862BE47241E9FB700EDEC97 /* CircleStyle.swift in Sources */,
