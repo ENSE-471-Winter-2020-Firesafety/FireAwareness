@@ -19,6 +19,7 @@
 		1862BE4C241ECF4800EDEC97 /* CallPhoneStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862BE4B241ECF4800EDEC97 /* CallPhoneStyle.swift */; };
 		1862BE50241EFF3300EDEC97 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862BE4F241EFF3300EDEC97 /* UserData.swift */; };
 		1888E6302427F27700FB314C /* EscapePlanGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */; };
+		DB4ED7BE242816820073FE99 /* PositiveFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4ED7BD242816820073FE99 /* PositiveFeedback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1862BE4B241ECF4800EDEC97 /* CallPhoneStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallPhoneStyle.swift; sourceTree = "<group>"; };
 		1862BE4F241EFF3300EDEC97 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapePlanGridLayout.swift; sourceTree = "<group>"; };
+		DB4ED7BD242816820073FE99 /* PositiveFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveFeedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				1862BE0D241E850F00EDEC97 /* SceneDelegate.swift */,
 				1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */,
 				1862BE12241E850F00EDEC97 /* HomePageDetail.swift */,
+				DB4ED7BD242816820073FE99 /* PositiveFeedback.swift */,
 				1862BE14241E851200EDEC97 /* Assets.xcassets */,
 				1862BE19241E851200EDEC97 /* LaunchScreen.storyboard */,
 				1862BE1C241E851200EDEC97 /* Info.plist */,
@@ -187,6 +190,7 @@
 				1862BE47241E9FB700EDEC97 /* CircleStyle.swift in Sources */,
 				1862BE13241E850F00EDEC97 /* HomePageDetail.swift in Sources */,
 				1862BE4A241EA0B500EDEC97 /* PhoneCall.swift in Sources */,
+				DB4ED7BE242816820073FE99 /* PositiveFeedback.swift in Sources */,
 				1862BE4C241ECF4800EDEC97 /* CallPhoneStyle.swift in Sources */,
 				1862BE11241E850F00EDEC97 /* FireEmergency.xcdatamodeld in Sources */,
 			);
