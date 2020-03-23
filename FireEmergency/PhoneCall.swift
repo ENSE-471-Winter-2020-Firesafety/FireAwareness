@@ -9,6 +9,7 @@
 import SwiftUI
 
 
+
 struct PhoneCall: View
 {
     @EnvironmentObject var env: UserData
@@ -46,16 +47,29 @@ struct PhoneCall: View
                                         self.options.toggle()
                                         
                                     }, label: {
-                                           Image("setting")
+                                        HStack {
+                                            Image(systemName: "questionmark.circle")
+                                                .font(.title)
+                                           // .resizable()
+                                         //   .frame(width: 40, height: 40)
                                             .foregroundColor(.white)
-                                             .background(Color.black)
+                                          //   .background(Color.black)
+                                            Text("Help")
+                                                .fontWeight(.semibold)
+                                             //   .font(.title)
+                                        }
                                     })
-                                }
-                                HStack {
-                                    Text("Option")
-                                        .font(.subheadline)
-                                        .font(.system(size:15))
-                                }
+                                    //.buttonStyle(GradientButtonStyle())
+                                        .padding()
+                                        .foregroundColor(.white)
+                                     //   .background(Color.purple)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color(.orange), Color.pink]), startPoint: .leading, endPoint: .trailing))
+                                        
+                                    .cornerRadius(40)
+                               
+    
+                                 }
+                    
                             }
                            
                            
