@@ -19,9 +19,10 @@
 		1862BE4C241ECF4800EDEC97 /* CallPhoneStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862BE4B241ECF4800EDEC97 /* CallPhoneStyle.swift */; };
 		1862BE50241EFF3300EDEC97 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862BE4F241EFF3300EDEC97 /* UserData.swift */; };
 		1888E6302427F27700FB314C /* EscapePlanGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */; };
+		794090402428494F00B6A349 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7940903F2428494F00B6A349 /* PulseAnimation.swift */; };
+		799AA4122425E8FC005AAD1C /* HelperAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799AA4112425E8FC005AAD1C /* HelperAnimation.swift */; };
 		DB4ED7BE242816820073FE99 /* PositiveFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4ED7BD242816820073FE99 /* PositiveFeedback.swift */; };
 		DB4ED7C02428173E0073FE99 /* NegativeFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4ED7BF2428173E0073FE99 /* NegativeFeedback.swift */; };
-		799AA4122425E8FC005AAD1C /* HelperAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799AA4112425E8FC005AAD1C /* HelperAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +40,10 @@
 		1862BE4B241ECF4800EDEC97 /* CallPhoneStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallPhoneStyle.swift; sourceTree = "<group>"; };
 		1862BE4F241EFF3300EDEC97 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapePlanGridLayout.swift; sourceTree = "<group>"; };
+		7940903F2428494F00B6A349 /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
+		799AA4112425E8FC005AAD1C /* HelperAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAnimation.swift; sourceTree = "<group>"; };
 		DB4ED7BD242816820073FE99 /* PositiveFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveFeedback.swift; sourceTree = "<group>"; };
 		DB4ED7BF2428173E0073FE99 /* NegativeFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeFeedback.swift; sourceTree = "<group>"; };
-		799AA4112425E8FC005AAD1C /* HelperAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				DB4ED7BD242816820073FE99 /* PositiveFeedback.swift */,
 				DB4ED7BF2428173E0073FE99 /* NegativeFeedback.swift */,
 				799AA4112425E8FC005AAD1C /* HelperAnimation.swift */,
+				7940903F2428494F00B6A349 /* PulseAnimation.swift */,
 				1862BE14241E851200EDEC97 /* Assets.xcassets */,
 				1862BE19241E851200EDEC97 /* LaunchScreen.storyboard */,
 				1862BE1C241E851200EDEC97 /* Info.plist */,
@@ -197,6 +200,7 @@
 				1862BE47241E9FB700EDEC97 /* CircleStyle.swift in Sources */,
 				1862BE13241E850F00EDEC97 /* HomePageDetail.swift in Sources */,
 				1862BE4A241EA0B500EDEC97 /* PhoneCall.swift in Sources */,
+				794090402428494F00B6A349 /* PulseAnimation.swift in Sources */,
 				DB4ED7BE242816820073FE99 /* PositiveFeedback.swift in Sources */,
 				799AA4122425E8FC005AAD1C /* HelperAnimation.swift in Sources */,
 				1862BE4C241ECF4800EDEC97 /* CallPhoneStyle.swift in Sources */,
