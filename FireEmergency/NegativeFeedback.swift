@@ -30,7 +30,7 @@ struct NegativeFeedback: View {
                          }
                         .padding()
                          .background(Color(red: 203.0/255.0, green: 108.0/255.0, blue: 99.0/255.0))
-//                        Spacer()
+                        Spacer()
                         Text("9 1 8")
                             .bold()
                             .padding(.vertical)
@@ -72,7 +72,9 @@ struct NegativeFeedback: View {
                                 .background(Color.green)
                                 .shadow(radius: 6)
                         })//end of button
-//                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
             }//end of VStack
 
                 }//end of ZStack
