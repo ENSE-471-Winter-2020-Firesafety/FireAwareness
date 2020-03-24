@@ -7,20 +7,23 @@
 //
 
 import SwiftUI
-import UIKit
+
 struct HelperAnimation: View {
-    @State var helpAnimationOn = false
+    @State var wave = false
     @State var updateText = ""
     @State var count = 0
+    @State var clickThis = "9"
     
     var nineText = "Press the 9"
     var oneText = "Press the 1 twice"
     var callText = "Press the Call Button"
-    var arrayOfString: [String] = [
-        "You are doing great! Here is some help. Follow the steps to successfully call 9-1-1. Keep up the great work",
-        "Press the 9",
-        "Press the 1",
-        "Press the Call Button"
+    let arrayOfString = [
+        "You are doing great! Here is some help. Follow the steps to successfully call 9-1-1. Keep up the great work.",
+        "Step 1: Press the 9",
+        "Step 2: Press the 1 twice",
+        "Step 3: Press the Call Button",
+        "Step 4: Stay on the phone until an operator responds.s"
+        
     ]
     
     
@@ -32,7 +35,19 @@ struct HelperAnimation: View {
             HStack{//1's Row
                 
                 Button(action: {}, label: {
-                    Text("1")}).buttonStyle(CircleStyle())
+                     if self.count ==  3 {
+                                    //   ZStack{
+                                           Circle()
+                                           .stroke(lineWidth: 15)
+                                           .frame(width: 70 , height:50)
+                                           .foregroundColor(.blue)
+                                           .scaleEffect(wave ? 2 : 1)
+                                           .opacity(wave ? 0.1 : 1)
+                                        .animation(Animation.easeIn(duration: 1).repeatForever(autoreverses: true).speed(0.5)).onAppear(){
+                                               self.wave.toggle()
+                                           }
+                                       //}
+                                       }else{Text("1")}}).buttonStyle(CircleStyle())
                 
                 Button(action: {}, label: {
                     Text("2")}).buttonStyle(CircleStyle())
@@ -59,9 +74,25 @@ struct HelperAnimation: View {
                 Button(action: {}, label: {
                     Text("8")}).buttonStyle(CircleStyle())
                 
-                Button(action: {}, label: {
-                    Text("9")}).buttonStyle(CircleStyle())
+                Button(action: {}, label: {                //Text("9");
+                    if self.count ==  2 {
+                 //   ZStack{
+                        Circle()
+                        .stroke(lineWidth: 15)
+                        .frame(width: 70 , height:50)
+                        .foregroundColor(.blue)
+                        .scaleEffect(wave ? 2 : 1)
+                        .opacity(wave ? 0.1 : 1)
+                     .animation(Animation.easeIn(duration: 1).repeatForever(autoreverses: true).speed(0.5)).onAppear(){
+                            self.wave.toggle()
+                        }
+                    //}
+                    }else{Text("9")}
+                    
+                    
+                }).buttonStyle(CircleStyle())
             }//end of hstack 7's
+            
             
             HStack{//*'s Row
                 Button(action: {}, label: {
@@ -75,19 +106,39 @@ struct HelperAnimation: View {
             }//end of hstack
             HStack{//call  button
                 Button(action: {}, label: {
-                    Image(systemName: "phone")}).buttonStyle(CallPhoneStyle())
+                    
+                    if self.count ==  4 {
+                                     ZStack{
+                                           Circle()
+                                           .stroke(lineWidth: 15)
+                                           .frame(width: 70 , height:50)
+                                           .foregroundColor(.blue)
+                                           .scaleEffect(wave ? 2 : 1)
+                                           .opacity(wave ? 0.1 : 1)
+                                        .animation(Animation.easeIn(duration: 1).repeatForever(autoreverses: true).speed(0.5)).onAppear(){
+                                               self.wave.toggle()
+                                           }
+                                       }
+
+                                       }else{Image(systemName: "phone")}
+                }).buttonStyle(CallPhoneStyle())
             }//end of hstack call button
             
             VStack{
                 HStack{
-                    Image("dog").resizable().frame(width:80, height:80)
+                     Image("dog").resizable().frame(width:80, height:80)
                         .padding()
                     Text("\(updateText)")
-                    Button(action: {self.updateText = self.arrayOfString[self.count]; self.count += 1 },
+                    Button(action: {self.updateText = self.arrayOfString[self.count]; self.count += 1 ;
+                        if self.count == 5
+                        {self.count = 0};
+                        
+                    },
                     label: {
                         Image("RightArrow")
                         .resizable()
                         .frame(width:50 , height: 50)})
+                    
                 }
             }
             
