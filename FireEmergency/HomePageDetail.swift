@@ -11,7 +11,7 @@ import SwiftUI
 struct HomePageDetail: View {
     
     @State var show_phone_Screen = false;
-    
+    @State var isActive: Bool = false;
     var body: some View
     {
         
@@ -48,17 +48,19 @@ struct HomePageDetail: View {
 
                     Image("dog")
                     .resizable()
-                        .frame(width: 32, height: 32, alignment: .trailing)
+                        .frame(width: 75, height: 60, alignment: .trailing)
                 }
                 .padding()
                 .background(Color(red: 203.0/255.0, green: 108.0/255.0, blue: 99.0/255.0))
                 
                 Spacer()
+          
+                
                 
                 Button(action: {
                     
                     self.showPhoneScreen()
-                    
+                  
                     }) {
                     
                     Text("Practice Phone Call")
@@ -72,11 +74,14 @@ struct HomePageDetail: View {
                     .cornerRadius(40)
                     .shadow(radius: /*@START_MENU_TOKEN@*/6/*@END_MENU_TOKEN@*/)
                         
-                        if show_phone_Screen {
-                            EscapePlanGridLayout()
-                        }
+//                        if show_phone_Screen {
+//                            EscapePlanGridLayout()
+//                        }
+                     
                         
                 }
+                    
+                
                 
                
                 

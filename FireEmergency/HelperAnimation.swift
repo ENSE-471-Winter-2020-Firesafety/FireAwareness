@@ -22,7 +22,7 @@ struct HelperAnimation: View {
         "Step 1: Press the 9",
         "Step 2: Press the 1 twice",
         "Step 3: Press the Call Button",
-        "Step 4: Stay on the phone until an operator responds.s"
+        "Step 4: Stay on the phone until an operator responds."
         
     ]
     
@@ -75,6 +75,7 @@ struct HelperAnimation: View {
                     Text("8")}).buttonStyle(CircleStyle())
                 
                 Button(action: {}, label: {                //Text("9");
+                    
                     if self.count ==  2 {
                  //   ZStack{
                         Circle()
@@ -137,15 +138,24 @@ struct HelperAnimation: View {
                     label: {
                         Image("RightArrow")
                         .resizable()
-                        .frame(width:50 , height: 50)})
+                            .frame(width:50 , height: 50);
+                    })
                     
                 }
+                NavigationView{
+                    NavigationLink(destination: PhoneCall()){
+                                        Text("Go Back To Practice").buttonStyle(CircleStyle())
+                                    }
+                                }
             }
+            
             
         }//end of vstack
         
     }//end of body
 }//end of struct
+
+
 
 
 //end of struct
