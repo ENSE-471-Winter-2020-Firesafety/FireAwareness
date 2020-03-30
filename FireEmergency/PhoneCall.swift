@@ -12,24 +12,30 @@ import SwiftUI
 
 struct PhoneCall: View
 {
-    @EnvironmentObject var env: UserData
+    @EnvironmentObject var viewRouter: ViewRouter
+    
+    @EnvironmentObject var env: UserData 
     
     @State var helpMode = false
       
     @State var options = false
-      
- 
+    
+    @State var attmeptsFailed = 0
+    
+    
     var body: some View
     {
        // ZStack {
                
                VStack {
+                
                    
                    VStack {
                        
                        HStack {
                            
                           Button(action: {
+                            self.viewRouter.currentPage = PageEnum.HOME_PAGE
                                
                            }, label: {
                                  Image(systemName: "arrow.left.circle")
@@ -279,8 +285,7 @@ struct PhoneCall_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        PhoneCall().environmentObject(UserData())
+        PhoneCall().environmentObject(ViewRouter()).environmentObject(UserData())
     }
 }
         
-

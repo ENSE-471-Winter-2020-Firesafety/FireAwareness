@@ -21,6 +21,9 @@
 		1888E6302427F27700FB314C /* EscapePlanGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */; };
 		794090402428494F00B6A349 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7940903F2428494F00B6A349 /* PulseAnimation.swift */; };
 		799AA4122425E8FC005AAD1C /* HelperAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799AA4112425E8FC005AAD1C /* HelperAnimation.swift */; };
+		79BD7BE52431BA6E002D5885 /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD7BE42431BA6E002D5885 /* IndexView.swift */; };
+		79BD7BEA2431C162002D5885 /* PageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD7BE92431C162002D5885 /* PageEnum.swift */; };
+		79E43CAC242FE21E00930769 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E43CAB242FE21E00930769 /* ViewRouter.swift */; };
 		DB4ED7BE242816820073FE99 /* PositiveFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4ED7BD242816820073FE99 /* PositiveFeedback.swift */; };
 		DB4ED7C02428173E0073FE99 /* NegativeFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4ED7BF2428173E0073FE99 /* NegativeFeedback.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +45,9 @@
 		1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapePlanGridLayout.swift; sourceTree = "<group>"; };
 		7940903F2428494F00B6A349 /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 		799AA4112425E8FC005AAD1C /* HelperAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAnimation.swift; sourceTree = "<group>"; };
+		79BD7BE42431BA6E002D5885 /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
+		79BD7BE92431C162002D5885 /* PageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageEnum.swift; sourceTree = "<group>"; };
+		79E43CAB242FE21E00930769 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		DB4ED7BD242816820073FE99 /* PositiveFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveFeedback.swift; sourceTree = "<group>"; };
 		DB4ED7BF2428173E0073FE99 /* NegativeFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeFeedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +82,8 @@
 		1862BE0A241E850F00EDEC97 /* FireEmergency */ = {
 			isa = PBXGroup;
 			children = (
+				79BD7BE62431C129002D5885 /* Utils */,
+				79BD7BE42431BA6E002D5885 /* IndexView.swift */,
 				1862BE4E241EFF1800EDEC97 /* Model */,
 				1862BE45241E9F9F00EDEC97 /* ButtonStyle */,
 				1862BE0B241E850F00EDEC97 /* AppDelegate.swift */,
@@ -83,6 +91,7 @@
 				1862BE0D241E850F00EDEC97 /* SceneDelegate.swift */,
 				1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */,
 				1862BE12241E850F00EDEC97 /* HomePageDetail.swift */,
+				79E43CAB242FE21E00930769 /* ViewRouter.swift */,
 				DB4ED7BD242816820073FE99 /* PositiveFeedback.swift */,
 				DB4ED7BF2428173E0073FE99 /* NegativeFeedback.swift */,
 				799AA4112425E8FC005AAD1C /* HelperAnimation.swift */,
@@ -119,6 +128,14 @@
 				1862BE4F241EFF3300EDEC97 /* UserData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		79BD7BE62431C129002D5885 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				79BD7BE92431C162002D5885 /* PageEnum.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1862BE0C241E850F00EDEC97 /* AppDelegate.swift in Sources */,
+				79E43CAC242FE21E00930769 /* ViewRouter.swift in Sources */,
 				1888E6302427F27700FB314C /* EscapePlanGridLayout.swift in Sources */,
 				1862BE0E241E850F00EDEC97 /* SceneDelegate.swift in Sources */,
 				1862BE50241EFF3300EDEC97 /* UserData.swift in Sources */,
@@ -202,8 +220,10 @@
 				1862BE4A241EA0B500EDEC97 /* PhoneCall.swift in Sources */,
 				794090402428494F00B6A349 /* PulseAnimation.swift in Sources */,
 				DB4ED7BE242816820073FE99 /* PositiveFeedback.swift in Sources */,
+				79BD7BEA2431C162002D5885 /* PageEnum.swift in Sources */,
 				799AA4122425E8FC005AAD1C /* HelperAnimation.swift in Sources */,
 				1862BE4C241ECF4800EDEC97 /* CallPhoneStyle.swift in Sources */,
+				79BD7BE52431BA6E002D5885 /* IndexView.swift in Sources */,
 				1862BE11241E850F00EDEC97 /* FireEmergency.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

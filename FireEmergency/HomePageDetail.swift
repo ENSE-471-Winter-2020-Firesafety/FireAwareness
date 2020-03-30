@@ -12,12 +12,18 @@ struct HomePageDetail: View {
     
     @State var show_phone_Screen = false;
     @State var isActive: Bool = false;
+
+    @EnvironmentObject var viewRouter: ViewRouter
+    
+    
     var body: some View
     {
         
    //     NavigationView
    //     {
         ZStack {
+         
+            
 //            .forcegroundColor()
 //            Color(red: 0.5, green: 0.3, bule: 0.4)
 //            Color.pink.edgesIgnoringSafeArea(.bottom)
@@ -57,12 +63,8 @@ struct HomePageDetail: View {
           
                 
                 
-                Button(action: {
-                    
-                    self.showPhoneScreen()
-                  
-                    }) {
-                    
+                Button(action: {self.viewRouter.currentPage = PageEnum.PHONE_PAGE})
+                {
                     Text("Practice Phone Call")
                     .font(.title)
                     .fontWeight(.medium)
@@ -86,7 +88,8 @@ struct HomePageDetail: View {
                
                 
                 Spacer()
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+        
+                Button(action:{self.viewRouter.currentPage = PageEnum.ESCAPE_PAGE}) {
                                    Text("Draw Escape Plan")
                                        .font(.title)
                                        .fontWeight(.medium)
@@ -143,11 +146,15 @@ struct HomePageDetail: View {
          show_phone_Screen.toggle()
     }
     
+    
 }
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomePageDetail()
+        HomePageDetail().environmentObject(ViewRouter())
     }
 }
+
+
+
