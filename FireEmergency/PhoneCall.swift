@@ -12,39 +12,39 @@ import SwiftUI
 
 struct PhoneCall: View
 {
-    @EnvironmentObject var env: UserData
+    @EnvironmentObject var viewRouter: ViewRouter
+    
+    @EnvironmentObject var env: UserData 
     
     @State var helpMode = false
       
     @State var options = false
-      
- 
+    
+    @State var attmeptsFailed = 0
+    
+    
     var body: some View
     {
        // ZStack {
         NavigationView {
         
                VStack {
+                
                    
                    VStack {
 
                        HStack {
                            
-                        NavigationLink(destination: HomePageDetail(), label: {Image(systemName: "arrow.left.circle")
-                            .resizable()
-                            .frame(width: 40, height: 40, alignment: .leading)
-                            .foregroundColor(.black)
-                        })
-                        
-//                          Button(action: {
-//
-//                           }, label: {
-//                                 Image(systemName: "arrow.left.circle")
-//                                  .resizable()
-//                                  .frame(width: 40, height: 40, alignment: .leading)
-//                                   .foregroundColor(.black)
-//                                //   .background(Color.black)
-//                           })
+                          Button(action: {
+                            self.viewRouter.currentPage = PageEnum.HOME_PAGE
+                               
+                           }, label: {
+                                 Image(systemName: "arrow.left.circle")
+                                  .resizable()
+                                  .frame(width: 40, height: 40, alignment: .leading)
+                                   .foregroundColor(.black)
+                                //   .background(Color.black)
+                           })
                            
                            Spacer()
                         
@@ -287,8 +287,7 @@ struct PhoneCall_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        PhoneCall().environmentObject(UserData())
+        PhoneCall().environmentObject(ViewRouter()).environmentObject(UserData())
     }
 }
         
-
