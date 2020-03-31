@@ -15,8 +15,8 @@ struct HomePageDetail: View {
     var body: some View
     {
         
-   //     NavigationView
-   //     {
+        NavigationView
+        {
         ZStack {
 //            .forcegroundColor()
 //            Color(red: 0.5, green: 0.3, bule: 0.4)
@@ -56,13 +56,7 @@ struct HomePageDetail: View {
                 Spacer()
           
                 
-                
-                Button(action: {
-                    
-                    self.showPhoneScreen()
-                  
-                    }) {
-                    
+                NavigationLink(destination: PhoneCall()){
                     Text("Practice Phone Call")
                     .font(.title)
                     .fontWeight(.medium)
@@ -73,13 +67,30 @@ struct HomePageDetail: View {
                     .background(/*@START_MENU_TOKEN@*/Color.orange/*@END_MENU_TOKEN@*/)
                     .cornerRadius(40)
                     .shadow(radius: /*@START_MENU_TOKEN@*/6/*@END_MENU_TOKEN@*/)
-                        
-//                        if show_phone_Screen {
-//                            EscapePlanGridLayout()
-//                        }
-                     
-                        
                 }
+//                Button(action: {
+//
+//                    self.showPhoneScreen()
+//
+//                    }) {
+//
+//                    Text("Practice Phone Call")
+//                    .font(.title)
+//                    .fontWeight(.medium)
+//                    .foregroundColor(Color.black)
+//                    .multilineTextAlignment(.center)
+//                    .padding(.leading)
+//                    .frame(width: 300.0, height: 100.0)
+//                    .background(/*@START_MENU_TOKEN@*/Color.orange/*@END_MENU_TOKEN@*/)
+//                    .cornerRadius(40)
+//                    .shadow(radius: /*@START_MENU_TOKEN@*/6/*@END_MENU_TOKEN@*/)
+//
+////                        if show_phone_Screen {
+////                            EscapePlanGridLayout()
+////                        }
+//
+//
+//                }
                     
                 
                 
@@ -133,9 +144,9 @@ struct HomePageDetail: View {
         } // end of ZStack
             
     
-    //    } // end of Nav
-        
-        
+        } // end of Nav
+            .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("Home page")
    
     }
     

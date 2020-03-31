@@ -22,22 +22,29 @@ struct PhoneCall: View
     var body: some View
     {
        // ZStack {
-               
+        NavigationView {
+        
                VStack {
                    
                    VStack {
-                       
+
                        HStack {
                            
-                          Button(action: {
-                               
-                           }, label: {
-                                 Image(systemName: "arrow.left.circle")
-                                  .resizable()
-                                  .frame(width: 40, height: 40, alignment: .leading)
-                                   .foregroundColor(.black)
-                                //   .background(Color.black)
-                           })
+                        NavigationLink(destination: HomePageDetail(), label: {Image(systemName: "arrow.left.circle")
+                            .resizable()
+                            .frame(width: 40, height: 40, alignment: .leading)
+                            .foregroundColor(.black)
+                        })
+                        
+//                          Button(action: {
+//
+//                           }, label: {
+//                                 Image(systemName: "arrow.left.circle")
+//                                  .resizable()
+//                                  .frame(width: 40, height: 40, alignment: .leading)
+//                                   .foregroundColor(.black)
+//                                //   .background(Color.black)
+//                           })
                            
                            Spacer()
                         
@@ -266,11 +273,12 @@ struct PhoneCall: View
                                } // HStack for both Call and Clear Icon
 
                            } // end of HStack for button 4 , 5 and 6
-                   
+//                   Spacer()
                    } // end of vstack
                
         //   } // end of zstack
-        
+        }//end of Nav
+        .edgesIgnoringSafeArea(.all)
     }
 
 }
