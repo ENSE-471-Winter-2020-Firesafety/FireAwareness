@@ -116,6 +116,7 @@ struct HomePageDetail: View {
                                        .frame(width: 300.0, height: 100.0)
                                     .background(Color(red: 255/255, green: 172/255, blue: 4/255))
                     .cornerRadius(40)
+                    .shadow(radius: /*@START_MENU_TOKEN@*/6/*@END_MENU_TOKEN@*/)
                                }
                 
                 Spacer()
@@ -130,6 +131,7 @@ struct HomePageDetail: View {
                                        .frame(width: 300.0, height: 100.0)
                                     .background(Color(red: 251/255, green: 219/255, blue: 123/255))
                     .cornerRadius(40)
+                    .shadow(radius: /*@START_MENU_TOKEN@*/6/*@END_MENU_TOKEN@*/)
 //                                       .position(x: 200, y: 150)
                                }
                 Spacer()
@@ -143,7 +145,8 @@ struct HomePageDetail: View {
                                        .padding(.leading)
                                        .frame(width: 300.0, height: 100.0)
                                     .background(Color(red: 251/255, green: 251/255, blue: 4/255))
-                                      .cornerRadius(40)
+                                    .cornerRadius(40).shadow(radius: /*@START_MENU_TOKEN@*/6/*@END_MENU_TOKEN@*/)
+                    
                                }
                 Spacer()
             }.padding()
