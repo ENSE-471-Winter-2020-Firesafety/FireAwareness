@@ -19,6 +19,7 @@
 		1862BE4C241ECF4800EDEC97 /* CallPhoneStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862BE4B241ECF4800EDEC97 /* CallPhoneStyle.swift */; };
 		1862BE50241EFF3300EDEC97 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862BE4F241EFF3300EDEC97 /* UserData.swift */; };
 		1888E6302427F27700FB314C /* EscapePlanGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */; };
+		18AF9CCE243A644200692348 /* CallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF9CCD243A644200692348 /* CallScreen.swift */; };
 		794090402428494F00B6A349 /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7940903F2428494F00B6A349 /* PulseAnimation.swift */; };
 		799AA4122425E8FC005AAD1C /* HelperAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799AA4112425E8FC005AAD1C /* HelperAnimation.swift */; };
 		79BD7BE52431BA6E002D5885 /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD7BE42431BA6E002D5885 /* IndexView.swift */; };
@@ -43,6 +44,7 @@
 		1862BE4B241ECF4800EDEC97 /* CallPhoneStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallPhoneStyle.swift; sourceTree = "<group>"; };
 		1862BE4F241EFF3300EDEC97 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapePlanGridLayout.swift; sourceTree = "<group>"; };
+		18AF9CCD243A644200692348 /* CallScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallScreen.swift; sourceTree = "<group>"; };
 		7940903F2428494F00B6A349 /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 		799AA4112425E8FC005AAD1C /* HelperAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAnimation.swift; sourceTree = "<group>"; };
 		79BD7BE42431BA6E002D5885 /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				1862BE0B241E850F00EDEC97 /* AppDelegate.swift */,
 				1862BE49241EA0B500EDEC97 /* PhoneCall.swift */,
 				1862BE0D241E850F00EDEC97 /* SceneDelegate.swift */,
+				18AF9CCD243A644200692348 /* CallScreen.swift */,
 				1888E62F2427F27700FB314C /* EscapePlanGridLayout.swift */,
 				1862BE12241E850F00EDEC97 /* HomePageDetail.swift */,
 				79E43CAB242FE21E00930769 /* ViewRouter.swift */,
@@ -224,6 +227,7 @@
 				799AA4122425E8FC005AAD1C /* HelperAnimation.swift in Sources */,
 				1862BE4C241ECF4800EDEC97 /* CallPhoneStyle.swift in Sources */,
 				79BD7BE52431BA6E002D5885 /* IndexView.swift in Sources */,
+				18AF9CCE243A644200692348 /* CallScreen.swift in Sources */,
 				1862BE11241E850F00EDEC97 /* FireEmergency.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

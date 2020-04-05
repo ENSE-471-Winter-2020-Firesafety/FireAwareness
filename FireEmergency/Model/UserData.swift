@@ -10,7 +10,7 @@ import SwiftUI
 
 
 class UserData : ObservableObject {
-    @Published  var display : String = ""
+    @Published  var display : String = "9 1 1"
     @Published var isPresented = false;
     
     //var originator : Originator = Originator(state: "")
