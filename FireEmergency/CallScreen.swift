@@ -162,7 +162,7 @@ struct CallScreen: View {
         } // end of ZStack
     }
 }
-
+}
 struct CallScreen_Previews: PreviewProvider {
     static var previews: some View {
         CallScreen().environmentObject(ViewRouter())
