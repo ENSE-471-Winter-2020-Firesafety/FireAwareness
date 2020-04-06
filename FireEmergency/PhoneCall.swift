@@ -23,6 +23,7 @@ struct PhoneCall: View
     @State var attmeptsFailed = 0
     
     
+    
     var body: some View
     {
        ZStack {
@@ -131,7 +132,6 @@ struct PhoneCall: View
                        // button 3
                        Button(action: {
                                self.env.receieveInput(input: "3")
-                           
                        }, label: {
                            Text("3")
                                .foregroundColor(.black)
@@ -154,6 +154,7 @@ struct PhoneCall: View
                            // button 5
                            Button(action: {
                                    self.env.receieveInput(input: "5")
+                        
                                }, label: {
                                    Text("5")
                                    .foregroundColor(.black)
@@ -164,6 +165,7 @@ struct PhoneCall: View
                            // button 6
                            Button(action: {
                                    self.env.receieveInput(input: "6")
+                     
                                }, label: {
                                    Text("6")
                                    .foregroundColor(.black)
@@ -177,7 +179,7 @@ struct PhoneCall: View
                                       // button 7
                                     Button(action: {
                                            self.env.receieveInput(input: "7")
-                                                  
+                          
                                     }, label: {
                                         Text("7")
                                             .foregroundColor(.black)
@@ -187,6 +189,7 @@ struct PhoneCall: View
                                     // button 8
                                     Button(action: {
                                            self.env.receieveInput(input: "8")
+                           
                                         }, label: {
                                             Text("8")
                                             .foregroundColor(.black)
@@ -197,6 +200,7 @@ struct PhoneCall: View
                                     // button 9
                                     Button(action: {
                                        self.env.receieveInput(input: "9")
+                   
                                    }, label: {
                                        Text("9")
                                    })
@@ -208,6 +212,7 @@ struct PhoneCall: View
                                 // button 4
                               Button(action: {
                                       self.env.receieveInput(input: "*")
+                                
                               }, label: {
                                   Text("*")
                                       .foregroundColor(.black)
@@ -217,6 +222,7 @@ struct PhoneCall: View
                               // button 5
                               Button(action: {
                                       self.env.receieveInput(input: "0")
+                                
                                   }, label: {
                                       Text("0")
                                       .foregroundColor(.black)
@@ -227,6 +233,7 @@ struct PhoneCall: View
                               // button 6
                               Button(action: {
                                       self.env.receieveInput(input: "#")
+                                
                                   }, label: {
                                       Text("#")
                                       .foregroundColor(.black)
