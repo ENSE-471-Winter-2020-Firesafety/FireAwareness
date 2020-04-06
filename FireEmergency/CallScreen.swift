@@ -134,14 +134,38 @@ struct CallScreen: View {
                     
                     HStack {
                         
-                        Image(systemName: "person.fill")
+                        Image("fireFighter")
                             .resizable()
-                            .frame(width: 30, height: 30)
+                            .frame(width: 50, height: 50)
                         Spacer()
-                        
+                        ZStack{
+                            Image("dialogBox2")
+                            .resizable()
+                            Text("9-1-1, what's you emergcy?")
+                                .font(.body)
+                                .bold()
+                        }
                     }
                     .padding()
                     Spacer()
+                    HStack{
+                        Spacer()
+                        ZStack{
+                            Image("dialogBox2")
+                                .resizable()
+                                .rotationEffect(Angle.init(degrees: 180))
+                            Text("I'm at...")
+                                .font(.body)
+                                .bold()
+                        }
+                        Spacer()
+                        Image("kids")
+                            .resizable()
+                            .frame(width: 70, height: 70)
+                        
+                       
+                    }
+//                    Spacer()
                 }
                 
                 
