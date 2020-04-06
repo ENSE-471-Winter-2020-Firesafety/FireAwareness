@@ -87,7 +87,7 @@ struct PhoneCall: View
                            if options {
                                Toggle(isOn: $helpMode, label: {
                                    Text("Help Mode")
-                                       .font(.system(size:25))
+                                       .font(.system(size:20))
                                        .foregroundColor(.black)
                                })
                            }
@@ -295,7 +295,7 @@ struct PhoneCall: View
                
           } // end of zstack
        // }//end of Nav
-        .edgesIgnoringSafeArea(.all)
+       // .edgesIgnoringSafeArea(.all)
     }
 
 }

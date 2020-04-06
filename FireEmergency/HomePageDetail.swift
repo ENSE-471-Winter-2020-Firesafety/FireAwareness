@@ -19,8 +19,8 @@ struct HomePageDetail: View {
     var body: some View
     {
         
-        NavigationView
-        {
+     //   NavigationView
+     //   {
         ZStack {
          
             
@@ -156,9 +156,9 @@ struct HomePageDetail: View {
         } // end of ZStack
             
     
-        } // end of Nav
-            .edgesIgnoringSafeArea(.all)
-        .navigationBarTitle("Home page")
+    //    } // end of Nav
+      //      .edgesIgnoringSafeArea(.all)
+     //   .navigationBarTitle("Home page")
    
     }
     
