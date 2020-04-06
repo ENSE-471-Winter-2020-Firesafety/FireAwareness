@@ -9,11 +9,14 @@
 import SwiftUI
 
 struct PositiveFeedback: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         ZStack{
             VStack(spacing: 0.0){
                 HStack {
                  Button(action: {
+                    
+                    self.viewRouter.currentPage = PageEnum.HOME_PAGE
                      
                  }, label: {
                        Image(systemName: "house.fill")
@@ -52,21 +55,36 @@ struct PositiveFeedback: View {
                 
                 HStack{
                     Spacer()
-                    Button(action: {}, label:{
-                                          Image(systemName: "arrow.left.circle")
-                                              .resizable()
-                                              .frame(width: 50.0, height: 50.0, alignment: .leading)
-                                              .foregroundColor(.black)
-                                      })//end of button
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Button(action: {}, label:{
-                                          Image(systemName: "arrow.right.circle")
-                                              .resizable()
-                                              .frame(width: 50.0, height: 50.0, alignment: .leading)
-                                              .foregroundColor(.black)
-                                      })//end of button
+//                    Button(action: {}, label:{
+//                                          Image(systemName: "arrow.left.circle")
+//                                              .resizable()
+//                                              .frame(width: 50.0, height: 50.0, alignment: .leading)
+//                                              .foregroundColor(.black)
+//                                      })//end of button
+                  //  Spacer()
+                    //Spacer()
+                    //Spacer()
+//                    Button(action: {}, label:{
+//                                              Text("Continue");
+//                                              Image(systemName: "arrow.right.circle")
+//                                              .resizable()
+//                                              .frame(width: 50.0, height: 50.0, alignment: .leading)
+//                                              .foregroundColor(.black)
+//                                      })//end of button
+                    Button(action: {
+                        self.viewRouter.currentPage = PageEnum.OPERATOR_PAGE
+                    } ,
+                           label:{ Text("Proceed to call")
+                            .fontWeight(.bold)
+                            .font(.title)
+                            .foregroundColor(.black)
+                            .padding()
+                            .overlay(RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.green, lineWidth: 5))
+                            
+                            
+                    })
+                        
                     Spacer()
                 }
                    

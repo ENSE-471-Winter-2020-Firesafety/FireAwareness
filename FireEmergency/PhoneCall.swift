@@ -25,14 +25,14 @@ struct PhoneCall: View
     
     var body: some View
     {
-       // ZStack {
-        NavigationView {
+       ZStack {
+        //NavigationView {
         
                VStack {
                 
                    
                    VStack {
-
+                        
                        HStack {
                            
                           Button(action: {
@@ -60,7 +60,7 @@ struct PhoneCall: View
                                            // .resizable()
                                          //   .frame(width: 40, height: 40)
                                             .foregroundColor(.white)
-                                          //   .background(Color.black)
+                                          //   .background(C     olor.black)
                                             Text("Help")
                                                 .fontWeight(.semibold)
                                              //   .font(.title)
@@ -93,7 +93,7 @@ struct PhoneCall: View
                         
                        } // HStack for helpMode toggle
                            
-                   } // option + back Button
+                   }.padding(.top) // option + back Button
                        
                    .padding()
                   Spacer()
@@ -243,7 +243,17 @@ struct PhoneCall: View
                                HStack {
                                    
                                        Button(action: {
-                                           
+                                        if self.env.display == "911"
+                                        {
+                                            self.viewRouter.currentPage = PageEnum.SUCCESS_CALL
+                                        }
+                                        else if self.env.display != "911"
+                                        {
+                                            
+                                            print(self.attmeptsFailed)
+                                        
+                                            self.viewRouter.currentPage = PageEnum.FAIL_CALL
+                                        }
                                            }, label: {
                                                    Image(systemName: "phone")
                                                                      
@@ -273,11 +283,11 @@ struct PhoneCall: View
                                } // HStack for both Call and Clear Icon
 
                            } // end of HStack for button 4 , 5 and 6
-//                   Spacer()
+                 Spacer()
                    } // end of vstack
                
-        //   } // end of zstack
-        }//end of Nav
+          } // end of zstack
+       // }//end of Nav
         .edgesIgnoringSafeArea(.all)
     }
 
