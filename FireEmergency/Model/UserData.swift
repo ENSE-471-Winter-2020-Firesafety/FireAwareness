@@ -10,7 +10,7 @@ import SwiftUI
 
 
 class UserData : ObservableObject {
-    @Published  var display : String = "9 1 1"
+    @Published  var display : String = ""
     @Published var isPresented = false;
     
     //var originator : Originator = Originator(state: "")
@@ -19,6 +19,11 @@ class UserData : ObservableObject {
     func receieveInput(input : String)
     {
         self.display += input
+    }
+    
+    func getUserInput() -> String
+    {
+        return self.display
     }
     
 }

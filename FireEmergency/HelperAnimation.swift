@@ -15,7 +15,7 @@ struct HelperAnimation: View {
     @State var count = 0
     @State var clickThis = "9"
     @State var animationInputNumbers = ""
-    
+    @State var numberStack =  ""
     var nineText = "Press the 9"
     var oneText = "Press the 1 twice"
     var callText = "Press the Call Button"
@@ -27,6 +27,7 @@ struct HelperAnimation: View {
         "Step 4: Stay on the phone until an operator responds."
         
     ]
+    let arrayOfInput = ["9" , "9 1 1"]
     
     
     var body: some View {
@@ -34,27 +35,28 @@ struct HelperAnimation: View {
         
         
         VStack{
-            
-            VStack{
-                HStack{
-                    
-                    Button(action: {
-                        self.viewRouter.currentPage = PageEnum.HOME_PAGE
-                    }, label: {
-                        Image(systemName: "arrow.left.circle")
-                            .resizable()
-                            .frame(width: 40, height: 40, alignment: .leading)
-                            .foregroundColor(.black)
-                        //   .background(Color.black)
-                    })
-                    Spacer()
-                }.padding(30)
-                
-            }
+            HStack{
+                            
+                            Button(action: {
+                                self.viewRouter.currentPage = PageEnum.PHONE_PAGE
+                            }, label: {
+                                Image(systemName: "arrow.left.circle")
+                                    .resizable()
+                                    .frame(width: 40, height: 40, alignment: .leading)
+                                    .foregroundColor(.black)
+                                //   .background(Color.black)
+                            })
+                            Spacer()
+                        }.padding(30)
             Spacer()
+            VStack{
+              Text("\(numberStack)")
+
+            }
+         
             
             VStack{ //container for the keypad
-                
+          
                 HStack{//1's Row
                     
                     Button(action: {}, label: {
@@ -154,7 +156,15 @@ struct HelperAnimation: View {
                         Image("dog").resizable().frame(width:80, height:80)
                             .padding()
                         Text("\(updateText)")
-                        Button(action: {self.updateText = self.arrayOfString[self.count]; self.count += 1 ;
+                        Button(action: {self.updateText =
+                            self.arrayOfString[self.count];
+                            self.count += 1 ;
+                            if self.count == 2
+                            {self.numberStack = self.arrayOfInput[0]}
+                            else if self.count == 3
+                            {self.numberStack = self.arrayOfInput[1]}
+                            else if self.count == 1
+                            {self.numberStack = ""}
                             if self.count == 5
                             {self.count = 0};
                             
@@ -163,7 +173,7 @@ struct HelperAnimation: View {
                                 Image("RightArrow")
                                     .resizable()
                                     .frame(width:50 , height: 50);
-                        })
+                        }).edgesIgnoringSafeArea(.all)
                         
                     }
                     

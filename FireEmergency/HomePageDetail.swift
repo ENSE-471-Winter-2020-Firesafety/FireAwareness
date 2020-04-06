@@ -12,7 +12,7 @@ struct HomePageDetail: View {
     
     @State var show_phone_Screen = false;
     @State var isActive: Bool = false;
-
+    
     @EnvironmentObject var viewRouter: ViewRouter
     
     

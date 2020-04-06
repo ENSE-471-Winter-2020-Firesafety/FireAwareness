@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct CallScreen: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     @State var homeButton = false;
     @State var callMode : Bool = true;
     @EnvironmentObject var display : UserData
@@ -19,8 +20,8 @@ struct CallScreen: View {
             VStack {
                 HStack {
                     Button(action: {
-                        
-                        self.homeButton.toggle()
+                        self.viewRouter.currentPage = PageEnum.HOME_PAGE
+                       // self.homeButton.toggle()
                         
                     }, label: {
                         Image(systemName: "house")
@@ -34,7 +35,7 @@ struct CallScreen: View {
                 .padding()
                 Spacer()
                 VStack {
-                    Text(display.display)
+                    Text("9 1 1")
                         .font(.system(size:40))
                     //   Spacer()
                     HStack {
@@ -118,7 +119,7 @@ struct CallScreen: View {
                    // Spacer()
                     VStack {
                         Button(action: {
-                            
+                            self.viewRouter.currentPage = PageEnum.PHONE_PAGE
                         }, label: {
                             Image(systemName: "phone")
                             .foregroundColor(.white)
