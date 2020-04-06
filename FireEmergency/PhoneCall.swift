@@ -100,13 +100,14 @@ struct PhoneCall: View
                   Spacer()
                    
                    HStack {
-             
+                    
                            Text(env.display)
                            .foregroundColor(.black)
-                           .font(.system(size:25))
+                           .font(.system(size:20))
 
                        } // HStack for display Area
-                   
+                
+                   Spacer()
                    HStack {
                        // button 1
                        
@@ -290,7 +291,8 @@ struct PhoneCall: View
                                } // HStack for both Call and Clear Icon
 
                            } // end of HStack for button 4 , 5 and 6
-                 Spacer()
+                        .padding(10)
+               //  Spacer()
                    } // end of vstack
                
           } // end of zstack

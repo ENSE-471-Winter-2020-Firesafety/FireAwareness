@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct CallScreen: View {
-    @EnvironmentObject var viewRouter: ViewRouter
     @State var homeButton = false;
     @State var callMode : Bool = true;
-    @EnvironmentObject var display : UserData
+    @EnvironmentObject var view : ViewRouter
+//     @EnvironmentObject var display : UserData
     @State var disAbledOtherButtons = false;
     
     var body: some View {
@@ -20,8 +20,8 @@ struct CallScreen: View {
             VStack {
                 HStack {
                     Button(action: {
-                        self.viewRouter.currentPage = PageEnum.HOME_PAGE
-                       // self.homeButton.toggle()
+                        
+                        self.view.currentPage = PageEnum.HOME_PAGE
                         
                     }, label: {
                         Image(systemName: "house")
@@ -35,7 +35,7 @@ struct CallScreen: View {
                 .padding()
                 Spacer()
                 VStack {
-                    Text("9 1 1")
+                    Text("911")
                         .font(.system(size:40))
                     //   Spacer()
                     HStack {
@@ -119,7 +119,7 @@ struct CallScreen: View {
                    // Spacer()
                     VStack {
                         Button(action: {
-                            self.viewRouter.currentPage = PageEnum.PHONE_PAGE
+                            self.view.currentPage = PageEnum.PHONE_PAGE
                         }, label: {
                             Image(systemName: "phone")
                             .foregroundColor(.white)
@@ -135,7 +135,10 @@ struct CallScreen: View {
                     
                     HStack {
                         
-                        Image("fireFighter")
+                        Text("Observer")
+                            .fontWeight(.semibold)
+                            .font(.body)
+                        Image(systemName: "person.fill")
                             .resizable()
                             .frame(width: 50, height: 50)
                         Spacer()
@@ -149,27 +152,11 @@ struct CallScreen: View {
                     }
                     .padding()
                     Spacer()
-                    HStack{
+                    VStack(alignment:.leading) {
+                        QuesitionView()
                         Spacer()
-                        ZStack{
-                            Image("dialogBox2")
-                                .resizable()
-                                .rotationEffect(Angle.init(degrees: 180))
-                            Text("I'm at...")
-                                .font(.body)
-                                .bold()
-                        }
-                        Spacer()
-                        Image("kids")
-                            .resizable()
-                            .frame(width: 70, height: 70)
-                        
-                       
                     }
-//                    Spacer()
-                }
-                
-                
+                    .padding()
                 
             } // end of VStack
         } // end of ZStack
@@ -178,6 +165,7 @@ struct CallScreen: View {
 
 struct CallScreen_Previews: PreviewProvider {
     static var previews: some View {
-        CallScreen().environmentObject(UserData())
+        CallScreen().environmentObject(ViewRouter())
     }
 }
+
