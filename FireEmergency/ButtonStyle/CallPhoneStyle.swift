@@ -10,10 +10,11 @@ import SwiftUI
 
 struct CallPhoneStyle: ButtonStyle
 {
+    @State var callMode = false
     func makeBody(configuration: ButtonStyleConfiguration) -> some View {
         
             Circle()
-                .fill(Color.green)
+                .fill(callMode ? Color.red : Color.green)
             
         
         .overlay(
