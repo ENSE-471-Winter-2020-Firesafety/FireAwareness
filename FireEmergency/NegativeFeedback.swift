@@ -10,7 +10,7 @@ import SwiftUI
 
 struct NegativeFeedback: View {
     @EnvironmentObject var viewRouter: ViewRouter
-    // @EnvironmentObject var display : UserData
+//     @EnvironmentObject var display : UserData
     
     var body: some View {
         ZStack{
@@ -35,8 +35,10 @@ struct NegativeFeedback: View {
                 .background(Color(red: 203.0/255.0, green: 108.0/255.0, blue: 99.0/255.0))
                 Spacer()
                 // Text("9 1 8")
-                //Text(display.getUserInput())
-                Text("0")
+                Text("\(viewRouter.display)")
+//                Text("\(display.display)")
+//                Text(display.getUserInput())
+//                Text("0")
                     .bold()
                     .padding(.vertical)
                     .frame(width: 200.0, height: 100.0)
@@ -104,6 +106,6 @@ struct NegativeFeedback: View {
 struct NegativeFeedback_Previews: PreviewProvider {
     static var previews: some View {
         NegativeFeedback()
-        //.environmentObject(UserData())
+//        .environmentObject(UserData())
     }
 }

@@ -257,9 +257,8 @@ struct PhoneCall: View
                                         }
                                         else if self.env.display != "911"
                                         {
-                                            
+                                            self.viewRouter.display = self.env.display
                                             print(self.attmeptsFailed)
-                                        
                                             self.viewRouter.currentPage = PageEnum.FAIL_CALL
                                         }
                                            }, label: {

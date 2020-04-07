@@ -13,7 +13,7 @@ import SwiftUI
 class ViewRouter: ObservableObject {
     
     let objectWillChange = PassthroughSubject<ViewRouter,Never>()
-    
+    @Published  var display : String = ""
     var currentPage: PageEnum = PageEnum.HOME_PAGE {
         didSet {
             withAnimation() {
