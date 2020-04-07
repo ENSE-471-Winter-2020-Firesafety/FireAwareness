@@ -39,13 +39,13 @@ struct PositiveFeedback: View {
                     .font(.largeTitle)
                 HStack{
                     Image("Pasted Graphic")
-                    Button(action: {}, label:{
-                        Image(systemName: "arrowtriangle.right.fill")
-                            .resizable()
-                            .padding(.top)
-                            .frame(width: 20.0, height: 50.0, alignment: .leading)
-                            .foregroundColor(.black)
-                    })//end of button
+//                    Button(action: {}, label:{
+//                        Image(systemName: "arrowtriangle.right.fill")
+//                            .resizable()
+//                            .padding(.top)
+//                            .frame(width: 20.0, height: 50.0, alignment: .leading)
+//                            .foregroundColor(.black)
+//                    })//end of button
                 }//end of HStack
                
                 Image("positive feedback")
