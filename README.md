@@ -1,6 +1,6 @@
 # FireAwareness
 
-FireAwareness application is using for ios system.
+FireAwareness is a application that can do 911 call simulation.
 
 It is soucre code deliver of ENSE471 project.
 
