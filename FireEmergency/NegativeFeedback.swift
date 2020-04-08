@@ -112,7 +112,7 @@ struct NegativeFeedback: View {
             //                Spacer()
             
             
-            Text(" You got  \(viewRouter.getGoodInputs()), but  \(viewRouter.getBadInputs()) is wrong. Try again. If you're having trouble click the button below")
+            Text(" You got \(viewRouter.getGoodInputs()) right, but \(viewRouter.getBadInputs()) is wrong. Try again. If you're having trouble click the button below")
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 .frame(width: 200, height: 100, alignment: .leading)

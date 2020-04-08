@@ -2,7 +2,7 @@
 //  HelperAnimation.swift
 //  FireEmergency
 //
-//  Created by Pasion, Dionne on 2020-03-21.
+//  Created by Pasion, Timothy on 2020-03-21.
 //  Copyright © 2020 Mahamed. All rights reserved.
 //
 

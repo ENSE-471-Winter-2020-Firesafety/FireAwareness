@@ -2,7 +2,7 @@
 //  ViewRouter.swift
 //  FireEmergency
 //
-//  Created by Pasion, Dionne on 2020-03-28.
+//  Created by Pasion, Timothy on 2020-03-28.
 //  Copyright © 2020 Mahamed. All rights reserved.
 //
 
@@ -61,6 +61,10 @@ class ViewRouter: ObservableObject {
         if display[thirdIndex] == "1"
         {
             goodUserInput.append(display[thirdIndex])
+        }
+        if display[firstIndex] != "9" && display[secondIndex] != "1" && display[thirdIndex] != "1"
+        {
+            goodUserInput.append("None")
         }
         return goodUserInput
     }

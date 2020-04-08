@@ -251,6 +251,7 @@ struct PhoneCall: View
                                HStack {
                                    
                                        Button(action: {
+                                       
                                         if self.env.display == "911"
                                         {
                                             self.viewRouter.currentPage = PageEnum.SUCCESS_CALL
@@ -265,7 +266,8 @@ struct PhoneCall: View
                                                    Image(systemName: "phone")
                                                                      
                                                }).buttonStyle(CallPhoneStyle())
-                                               .padding()
+                                        .padding()
+                                        .disabled(self.env.display == "")
                                        } // HStack for Call Icon
                                        .padding(.leading,50)
                                

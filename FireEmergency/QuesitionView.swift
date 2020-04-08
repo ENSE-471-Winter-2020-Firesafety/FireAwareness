@@ -13,13 +13,13 @@ struct QuesitionView: View {
     
     @State var questions :[User] = [
     
-        User(id: 0, quesition: "okay, the fire trucks are on their way. dont go back into the house"),
-        User(id: 1, quesition: "what is your phone number?"),
-        User(id: 2, quesition: "is anyone still in the house?"),
-        User(id: 3, quesition: "what is your address?"),
-        User(id: 4, quesition: "how can i help you?"),
+        User(id: 0, quesition: "Okay, the fire trucks are on their way. Don't go back into the house."),
+        User(id: 1, quesition: "What is your phone number?"),
+        User(id: 2, quesition: "Is anyone still in the house?"),
+        User(id: 3, quesition: "What is your address?"),
+        User(id: 4, quesition: "How can I help you?"),
         User(id: 5, quesition: "One moment."),
-        User(id: 6, quesition: "911 what is your Emergency")
+        User(id: 6, quesition: "911 what is your emergency?")
     ]
     
     // 2

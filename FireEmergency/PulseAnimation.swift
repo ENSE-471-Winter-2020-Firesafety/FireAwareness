@@ -2,7 +2,7 @@
 //  PulseAnimation.swift
 //  FireEmergency
 //
-//  Created by Pasion, Dionne on 2020-03-22.
+//  Created by Pasion, Timothy on 2020-03-22.
 //  Copyright © 2020 Mahamed. All rights reserved.
 //
 

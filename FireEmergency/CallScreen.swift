@@ -135,25 +135,26 @@ struct CallScreen: View {
                     
                     HStack {
                         
-                        Text("Observer")
-                            .fontWeight(.semibold)
-                            .font(.body)
                         Image(systemName: "person.fill")
                             .resizable()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 45, height: 50)
+                        Text("Operator")
+                        .fontWeight(.semibold)
+                        .font(.body)
                         Spacer()
                         ZStack{
-                            Image("dialogBox2")
-                            .resizable()
-                            Text("9-1-1, what's you emergcy?")
-                                .font(.body)
-                                .bold()
+                        QuesitionView()
+//                            Image("dialogBox2")
+//                            .resizable()
+//                            Text("9-1-1, what's you emergcy?")
+//                                .font(.body)
+//                                .bold()
                         }
                     }
                     .padding()
                     Spacer()
                     VStack(alignment:.leading) {
-                        QuesitionView()
+                        //QuesitionView()
                         Spacer()
                     }
                     .padding()
