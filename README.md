@@ -17,7 +17,7 @@ Then, clicking button at left top corner to run the project on the ios simulator
 
 The application is about the 911 call simulation, it allows kids do the 911 phone call practice.
 
-![Image text](https://raw.githubusercontent.com/Nick-liu666/ENSE471/master/image/homePage.png)
+![Image text](https://raw.githubusercontent.com/Nick-liu666/ENSE471/master/image/homePage.png){:height="100px" width="100px"}
 
 The application only practice phone call section can work well. It can check the kids press correct number or not, then, it gives some helpful instruction. Also, the application has help mode which is only allowed user to press 9 and 1.
 
