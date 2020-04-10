@@ -15,6 +15,8 @@ Then, clicking button at left top corner to run the project on the ios simulator
 
 ## Usage
 
+The youtube video link to how to use the application: https://www.youtube.com/watch?v=hoZKDaVU_Hg&feature=youtu.be
+
 The application is about the 911 call simulation, it allows kids do the 911 phone call practice.
 
 ![Image text](https://raw.githubusercontent.com/Nick-liu666/ENSE471/master/image/homePage.png)
