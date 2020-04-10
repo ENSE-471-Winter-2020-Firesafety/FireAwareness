@@ -13,7 +13,7 @@ Using the Xcode to make a new project with clone git link which will automatical
 Then, clicking button at left top corner to run the project on the ios simulator which will complie the code, install application on the simulator and run the application
 (If you are first time using the Xcode, you might need to download one simulator at first)
 
-## usage
+## Usage
 
 The application is about the 911 call simulation, it allows kids do the 911 phone call practice.
 
